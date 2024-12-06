@@ -17,7 +17,7 @@ public class StudentService {
     private final StudentRepo repo = new StudentRepo();
 
     public Student addNewStudent(Student newStudent) {
-        Student studentToSave = newStudent.withId(UUID.randomUUID().toString());
+        Student studentToSave = Student.builder().id(UUID.randomUUID().toString()).build();
         return repo.save(studentToSave);
     }
 
