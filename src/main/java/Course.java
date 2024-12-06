@@ -9,9 +9,8 @@ import lombok.Builder;
 import lombok.Data;
 
 import java.util.List;
-import java.util.UUID;
 
-@Builder
+@Builder(toBuilder = true)
 @AllArgsConstructor
 @Data
 public class Course {
@@ -19,12 +18,4 @@ public class Course {
     private String name;
     private Teacher teacher;
     private List<Student> students;
-
-    @Builder
-    private Course(String name, Teacher teacher, List<Student> students) {
-        this.id = UUID.randomUUID().toString();
-        this.name = name;
-        this.teacher = teacher;
-        this.students = students;
-    }
 }
