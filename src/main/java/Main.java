@@ -5,7 +5,7 @@ public class Main {
 
         Student newStudent = Student.builder()
                 .name("Florian")
-                .subject("Geschichte")
+                .address("Musterstraße 42, 10117 Berlin")
                 .build();
 
         Student savedStudent = studentService.addNewStudent(newStudent);

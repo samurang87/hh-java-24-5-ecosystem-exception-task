@@ -7,7 +7,6 @@ public class StudentServiceTest {
     void findStudentById_returnsStudentWhenIdFound() {
         Student student = Student.builder()
                 .name("Alice")
-                .subject("Math")
                 .build();
         StudentService studentService = new StudentService();
         Student savedStudent = studentService.addNewStudent(student);
