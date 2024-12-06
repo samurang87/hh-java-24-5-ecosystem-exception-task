@@ -11,7 +11,7 @@ public class StudentServiceTest {
         StudentService studentService = new StudentService();
         Student savedStudent = studentService.addNewStudent(student);
 
-        Student result = studentService.findStudentById(savedStudent.id());
+        Student result = studentService.findStudentById(savedStudent.getId());
 
         Assertions.assertEquals(savedStudent, result);
     }

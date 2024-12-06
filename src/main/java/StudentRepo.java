@@ -9,7 +9,7 @@ public class StudentRepo {
     }
 
     public Student save(Student student) {
-        students.put(student.id(), student);
+        students.put(student.getId(), student);
         return student;
     }
 
