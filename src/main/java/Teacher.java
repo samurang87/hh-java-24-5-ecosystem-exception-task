@@ -1,11 +1,13 @@
-// Create a Teacher record with the following attributes: id, name, subject.
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
 
-import java.util.UUID;
+@Builder(toBuilder = true)
+@AllArgsConstructor
+@Data
+public class Teacher {
+    private final String id;
+    private final String name;
+    private final String subject;
 
-public record Teacher (String id, String name, String subject) {
-
-    public Teacher(String name, String subject) {
-        this(UUID.randomUUID().toString(), name, subject);
-
-    }
 }
